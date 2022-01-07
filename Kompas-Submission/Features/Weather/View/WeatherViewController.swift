@@ -7,17 +7,31 @@
 
 import UIKit
 import CoreLocation
+import Network
 
 class WeatherViewController: UIViewController {
     
     @IBOutlet var contentView: WeatherView!
     private let viewModel = WeatherViewModel()
     private var locationManager: CLLocationManager?
+    private let monitor = NWPathMonitor()
+    private var isNetworkAvailable = false
+    
+    private func checkNetworkAvailability() {
+        monitor.pathUpdateHandler = { [weak self] path in
+            if path.status == .satisfied {
+                self?.isNetworkAvailable = true
+            } else {
+                self?.isNetworkAvailable = false
+            }
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         commonSetup()
-        fetchData()
     }
     
     private func commonSetup() {
@@ -25,15 +39,22 @@ class WeatherViewController: UIViewController {
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
+        checkNetworkAvailability()
+        fetchData()
     }
     
     private func fetchData() {
-        self.getUserLocation { [weak self] lat, lon in
-            self?.viewModel.fetchWeatherData(latitude: lat, longitude: lon) { result in
-                DispatchQueue.main.async {
-                    self?.setDataToView(data: result)
+        if isNetworkAvailable {
+            self.getUserLocation { [weak self] lat, lon in
+                self?.viewModel.fetchWeatherData(latitude: lat, longitude: lon) { result in
+                    DispatchQueue.main.async {
+                        self?.setDataToView(data: result)
+                    }
                 }
             }
+        } else {
+            guard let data = self.viewModel.getDataFromCache() else { return }
+            self.setDataToView(data: data)
         }
     }
     
@@ -71,6 +92,10 @@ extension WeatherViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error getting user's location: \(error)")
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        fetchData()
     }
 }
 

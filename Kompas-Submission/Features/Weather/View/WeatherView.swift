@@ -39,27 +39,15 @@ class WeatherView: UIView {
         Bundle.main.loadNibNamed("WeatherView", owner: self, options: nil)
         contentView.frame = self.bounds
         scrollView.refreshControl = UIRefreshControl()
+        scrollView.refreshControl?.tintColor = .white
         sunriseCard.roundCorner(withRadius: 8)
         sunsetCard.roundCorner(withRadius: 8)
         windCard.roundCorner(withRadius: 8)
         pressureCard.roundCorner(withRadius: 8)
         humidCard.roundCorner(withRadius: 8)
         infoCard.roundCorner(withRadius: 8)
-        setGradientBackground()
         
         addSubview(contentView)
-    }
-    
-    func setGradientBackground() {
-        let colorTop =  UIColor(named: "blue")!.cgColor
-        let colorBottom = UIColor(named: "purple")!.cgColor
-                    
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = self.contentView.bounds
-                
-        self.contentView.layer.insertSublayer(gradientLayer, at:0)
     }
     
     required init?(coder: NSCoder) {
