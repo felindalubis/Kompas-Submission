@@ -38,7 +38,7 @@ class WeatherView: UIView {
     func commonInit() {
         Bundle.main.loadNibNamed("WeatherView", owner: self, options: nil)
         contentView.frame = self.bounds
-        
+        scrollView.refreshControl = UIRefreshControl()
         sunriseCard.roundCorner(withRadius: 8)
         sunsetCard.roundCorner(withRadius: 8)
         windCard.roundCorner(withRadius: 8)

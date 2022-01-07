@@ -33,4 +33,8 @@ extension Double {
 
         return localDate
     }
+    
+    func truncateDecimals(n: Int) -> String {
+        return String(format: "%.\(n)f", self)
+    }
 }

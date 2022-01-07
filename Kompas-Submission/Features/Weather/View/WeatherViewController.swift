@@ -14,13 +14,11 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        commonSetup()
         fetchData()
     }
     
-    
-    func setupUI() {
-        contentView.scrollView.refreshControl = UIRefreshControl()
+    func commonSetup() {
         contentView.scrollView.refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
     }
     
@@ -36,18 +34,18 @@ class WeatherViewController: UIViewController {
         contentView.cityLabel.text = "\(data.name), \(data.sys.country)"
         contentView.updateTimeLabel.text = "Update at: \(data.dt.getStringDate(dateStyle: .full))"
         contentView.weatherLabel.text = data.weather.first?.main
-        contentView.tempLabel.text = "\(String(format: "%.1f", data.main.temp))°C"
-        contentView.minTempLabel.text = "Min. Temp: \(String(format: "%.1f", data.main.tempMin))°C"
-        contentView.maxTempLabel.text = "Max. Temp: \(String(format: "%.1f", data.main.tempMax))°C"
+        contentView.tempLabel.text = "\(data.main.temp.truncateDecimals(n: 1))°C"
+        contentView.minTempLabel.text = "Min. Temp: \(data.main.tempMin.truncateDecimals(n: 1))°C"
+        contentView.maxTempLabel.text = "Max. Temp: \(data.main.tempMax.truncateDecimals(n: 1))°C"
         contentView.sunriseLabel.text = data.sys.sunrise.getStringDate(dateStyle: .time)
         contentView.sunsetLabel.text = data.sys.sunset.getStringDate(dateStyle: .time)
-        contentView.windLabel.text = String(format: "%.1f", data.wind.speed)
-        contentView.pressureLabel.text = String(format: "%1.f", data.main.pressure)
-        contentView.humidLabel.text = String(format: "%.1f", data.main.humidity)
+        contentView.windLabel.text = data.wind.speed.truncateDecimals(n: 1)
+        contentView.pressureLabel.text = data.main.pressure.truncateDecimals(n: 1)
+        contentView.humidLabel.text = data.main.humidity.truncateDecimals(n: 1)
     }
     
     @objc func didPullToRefresh() {
-        
+    
         DispatchQueue.main.asyncAfter(deadline: .now()+1.5, execute: {
             self.contentView.scrollView.refreshControl?.endRefreshing()
         })
