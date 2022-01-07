@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E36F80327875BCE00FDA43D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F80227875BCE00FDA43D /* AppDelegate.swift */; };
+		3E36F80527875BCE00FDA43D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F80427875BCE00FDA43D /* SceneDelegate.swift */; };
+		3E36F80727875BCE00FDA43D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F80627875BCE00FDA43D /* WeatherViewController.swift */; };
+		3E36F80A27875BCE00FDA43D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E36F80827875BCE00FDA43D /* Main.storyboard */; };
+		3E36F80C27875BCF00FDA43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E36F80B27875BCF00FDA43D /* Assets.xcassets */; };
+		3E36F80F27875BCF00FDA43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E36F80D27875BCF00FDA43D /* LaunchScreen.storyboard */; };
+		3E36F81A27875BD000FDA43D /* Kompas_SubmissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F81927875BD000FDA43D /* Kompas_SubmissionTests.swift */; };
+		3E36F82427875BD000FDA43D /* Kompas_SubmissionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F82327875BD000FDA43D /* Kompas_SubmissionUITests.swift */; };
+		3E36F82627875BD000FDA43D /* Kompas_SubmissionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F82527875BD000FDA43D /* Kompas_SubmissionUITestsLaunchTests.swift */; };
+		3E36F83A27875D1400FDA43D /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E36F83927875D1400FDA43D /* WeatherView.xib */; };
+		3E36F83C27875D2200FDA43D /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F83B27875D2200FDA43D /* WeatherView.swift */; };
+		3E36F83F2787682300FDA43D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F83E2787682300FDA43D /* UIView+Extension.swift */; };
+		3E36F8412787759500FDA43D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F8402787759500FDA43D /* APIService.swift */; };
+		3E36F843278775F600FDA43D /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F842278775F600FDA43D /* WeatherService.swift */; };
+		3E36F84527877D5000FDA43D /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F84427877D5000FDA43D /* WeatherViewModel.swift */; };
+		3E36F84727877E3C00FDA43D /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F84627877E3C00FDA43D /* WeatherModel.swift */; };
+		3E36F8492787861600FDA43D /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36F8482787861600FDA43D /* Double+extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E36F81627875BD000FDA43D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E36F7F727875BCE00FDA43D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E36F7FE27875BCE00FDA43D;
+			remoteInfo = "Kompas-Submission";
+		};
+		3E36F82027875BD000FDA43D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E36F7F727875BCE00FDA43D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E36F7FE27875BCE00FDA43D;
+			remoteInfo = "Kompas-Submission";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E36F7FF27875BCE00FDA43D /* Kompas-Submission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kompas-Submission.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E36F80227875BCE00FDA43D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E36F80427875BCE00FDA43D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E36F80627875BCE00FDA43D /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		3E36F80927875BCE00FDA43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E36F80B27875BCF00FDA43D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E36F80E27875BCF00FDA43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E36F81027875BCF00FDA43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E36F81527875BD000FDA43D /* Kompas-SubmissionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kompas-SubmissionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E36F81927875BD000FDA43D /* Kompas_SubmissionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kompas_SubmissionTests.swift; sourceTree = "<group>"; };
+		3E36F81F27875BD000FDA43D /* Kompas-SubmissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kompas-SubmissionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E36F82327875BD000FDA43D /* Kompas_SubmissionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kompas_SubmissionUITests.swift; sourceTree = "<group>"; };
+		3E36F82527875BD000FDA43D /* Kompas_SubmissionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kompas_SubmissionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3E36F83927875D1400FDA43D /* WeatherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherView.xib; sourceTree = "<group>"; };
+		3E36F83B27875D2200FDA43D /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		3E36F83E2787682300FDA43D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3E36F8402787759500FDA43D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3E36F842278775F600FDA43D /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		3E36F84427877D5000FDA43D /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		3E36F84627877E3C00FDA43D /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		3E36F8482787861600FDA43D /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E36F7FC27875BCE00FDA43D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E36F81227875BD000FDA43D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E36F81C27875BD000FDA43D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E36F7F627875BCE00FDA43D = {
+			isa = PBXGroup;
+			children = (
+				3E36F80127875BCE00FDA43D /* Kompas-Submission */,
+				3E36F81827875BD000FDA43D /* Kompas-SubmissionTests */,
+				3E36F82227875BD000FDA43D /* Kompas-SubmissionUITests */,
+				3E36F80027875BCE00FDA43D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E36F80027875BCE00FDA43D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F7FF27875BCE00FDA43D /* Kompas-Submission.app */,
+				3E36F81527875BD000FDA43D /* Kompas-SubmissionTests.xctest */,
+				3E36F81F27875BD000FDA43D /* Kompas-SubmissionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E36F80127875BCE00FDA43D /* Kompas-Submission */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F83D2787680A00FDA43D /* Extensions */,
+				3E36F83427875C2B00FDA43D /* Service */,
+				3E36F83327875BE700FDA43D /* Features */,
+				3E36F83227875BDB00FDA43D /* Base */,
+				3E36F80827875BCE00FDA43D /* Main.storyboard */,
+				3E36F80D27875BCF00FDA43D /* LaunchScreen.storyboard */,
+				3E36F80B27875BCF00FDA43D /* Assets.xcassets */,
+				3E36F81027875BCF00FDA43D /* Info.plist */,
+			);
+			path = "Kompas-Submission";
+			sourceTree = "<group>";
+		};
+		3E36F81827875BD000FDA43D /* Kompas-SubmissionTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F81927875BD000FDA43D /* Kompas_SubmissionTests.swift */,
+			);
+			path = "Kompas-SubmissionTests";
+			sourceTree = "<group>";
+		};
+		3E36F82227875BD000FDA43D /* Kompas-SubmissionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F82327875BD000FDA43D /* Kompas_SubmissionUITests.swift */,
+				3E36F82527875BD000FDA43D /* Kompas_SubmissionUITestsLaunchTests.swift */,
+			);
+			path = "Kompas-SubmissionUITests";
+			sourceTree = "<group>";
+		};
+		3E36F83227875BDB00FDA43D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F8402787759500FDA43D /* APIService.swift */,
+				3E36F80227875BCE00FDA43D /* AppDelegate.swift */,
+				3E36F80427875BCE00FDA43D /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3E36F83327875BE700FDA43D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F83527875C3E00FDA43D /* Weather */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3E36F83427875C2B00FDA43D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F842278775F600FDA43D /* WeatherService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3E36F83527875C3E00FDA43D /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F83827875CD300FDA43D /* View */,
+				3E36F83727875CCB00FDA43D /* ViewModel */,
+				3E36F83627875CC000FDA43D /* Model */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		3E36F83627875CC000FDA43D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F84627877E3C00FDA43D /* WeatherModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E36F83727875CCB00FDA43D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F84427877D5000FDA43D /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E36F83827875CD300FDA43D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F80627875BCE00FDA43D /* WeatherViewController.swift */,
+				3E36F83927875D1400FDA43D /* WeatherView.xib */,
+				3E36F83B27875D2200FDA43D /* WeatherView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E36F83D2787680A00FDA43D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E36F83E2787682300FDA43D /* UIView+Extension.swift */,
+				3E36F8482787861600FDA43D /* Double+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E36F7FE27875BCE00FDA43D /* Kompas-Submission */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E36F82927875BD000FDA43D /* Build configuration list for PBXNativeTarget "Kompas-Submission" */;
+			buildPhases = (
+				3E36F7FB27875BCE00FDA43D /* Sources */,
+				3E36F7FC27875BCE00FDA43D /* Frameworks */,
+				3E36F7FD27875BCE00FDA43D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kompas-Submission";
+			productName = "Kompas-Submission";
+			productReference = 3E36F7FF27875BCE00FDA43D /* Kompas-Submission.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E36F81427875BD000FDA43D /* Kompas-SubmissionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E36F82C27875BD000FDA43D /* Build configuration list for PBXNativeTarget "Kompas-SubmissionTests" */;
+			buildPhases = (
+				3E36F81127875BD000FDA43D /* Sources */,
+				3E36F81227875BD000FDA43D /* Frameworks */,
+				3E36F81327875BD000FDA43D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E36F81727875BD000FDA43D /* PBXTargetDependency */,
+			);
+			name = "Kompas-SubmissionTests";
+			productName = "Kompas-SubmissionTests";
+			productReference = 3E36F81527875BD000FDA43D /* Kompas-SubmissionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3E36F81E27875BD000FDA43D /* Kompas-SubmissionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E36F82F27875BD000FDA43D /* Build configuration list for PBXNativeTarget "Kompas-SubmissionUITests" */;
+			buildPhases = (
+				3E36F81B27875BD000FDA43D /* Sources */,
+				3E36F81C27875BD000FDA43D /* Frameworks */,
+				3E36F81D27875BD000FDA43D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E36F82127875BD000FDA43D /* PBXTargetDependency */,
+			);
+			name = "Kompas-SubmissionUITests";
+			productName = "Kompas-SubmissionUITests";
+			productReference = 3E36F81F27875BD000FDA43D /* Kompas-SubmissionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E36F7F727875BCE00FDA43D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					3E36F7FE27875BCE00FDA43D = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					3E36F81427875BD000FDA43D = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 3E36F7FE27875BCE00FDA43D;
+					};
+					3E36F81E27875BD000FDA43D = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 3E36F7FE27875BCE00FDA43D;
+					};
+				};
+			};
+			buildConfigurationList = 3E36F7FA27875BCE00FDA43D /* Build configuration list for PBXProject "Kompas-Submission" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E36F7F627875BCE00FDA43D;
+			productRefGroup = 3E36F80027875BCE00FDA43D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E36F7FE27875BCE00FDA43D /* Kompas-Submission */,
+				3E36F81427875BD000FDA43D /* Kompas-SubmissionTests */,
+				3E36F81E27875BD000FDA43D /* Kompas-SubmissionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E36F7FD27875BCE00FDA43D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E36F80F27875BCF00FDA43D /* LaunchScreen.storyboard in Resources */,
+				3E36F83A27875D1400FDA43D /* WeatherView.xib in Resources */,
+				3E36F80C27875BCF00FDA43D /* Assets.xcassets in Resources */,
+				3E36F80A27875BCE00FDA43D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E36F81327875BD000FDA43D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E36F81D27875BD000FDA43D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E36F7FB27875BCE00FDA43D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E36F80727875BCE00FDA43D /* WeatherViewController.swift in Sources */,
+				3E36F83C27875D2200FDA43D /* WeatherView.swift in Sources */,
+				3E36F80327875BCE00FDA43D /* AppDelegate.swift in Sources */,
+				3E36F83F2787682300FDA43D /* UIView+Extension.swift in Sources */,
+				3E36F84727877E3C00FDA43D /* WeatherModel.swift in Sources */,
+				3E36F8412787759500FDA43D /* APIService.swift in Sources */,
+				3E36F84527877D5000FDA43D /* WeatherViewModel.swift in Sources */,
+				3E36F8492787861600FDA43D /* Double+extension.swift in Sources */,
+				3E36F80527875BCE00FDA43D /* SceneDelegate.swift in Sources */,
+				3E36F843278775F600FDA43D /* WeatherService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E36F81127875BD000FDA43D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E36F81A27875BD000FDA43D /* Kompas_SubmissionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E36F81B27875BD000FDA43D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E36F82427875BD000FDA43D /* Kompas_SubmissionUITests.swift in Sources */,
+				3E36F82627875BD000FDA43D /* Kompas_SubmissionUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E36F81727875BD000FDA43D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E36F7FE27875BCE00FDA43D /* Kompas-Submission */;
+			targetProxy = 3E36F81627875BD000FDA43D /* PBXContainerItemProxy */;
+		};
+		3E36F82127875BD000FDA43D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E36F7FE27875BCE00FDA43D /* Kompas-Submission */;
+			targetProxy = 3E36F82027875BD000FDA43D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E36F80827875BCE00FDA43D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E36F80927875BCE00FDA43D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E36F80D27875BCF00FDA43D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E36F80E27875BCF00FDA43D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E36F82727875BD000FDA43D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3E36F82827875BD000FDA43D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E36F82A27875BD000FDA43D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G7629G4PP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Kompas-Submission/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felindalubis.Kompas-Submission";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E36F82B27875BD000FDA43D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G7629G4PP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Kompas-Submission/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felindalubis.Kompas-Submission";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E36F82D27875BD000FDA43D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G7629G4PP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felindalubis.Kompas-SubmissionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kompas-Submission.app/Kompas-Submission";
+			};
+			name = Debug;
+		};
+		3E36F82E27875BD000FDA43D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G7629G4PP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felindalubis.Kompas-SubmissionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kompas-Submission.app/Kompas-Submission";
+			};
+			name = Release;
+		};
+		3E36F83027875BD000FDA43D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G7629G4PP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felindalubis.Kompas-SubmissionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kompas-Submission";
+			};
+			name = Debug;
+		};
+		3E36F83127875BD000FDA43D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6G7629G4PP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.felindalubis.Kompas-SubmissionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kompas-Submission";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E36F7FA27875BCE00FDA43D /* Build configuration list for PBXProject "Kompas-Submission" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E36F82727875BD000FDA43D /* Debug */,
+				3E36F82827875BD000FDA43D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E36F82927875BD000FDA43D /* Build configuration list for PBXNativeTarget "Kompas-Submission" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E36F82A27875BD000FDA43D /* Debug */,
+				3E36F82B27875BD000FDA43D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E36F82C27875BD000FDA43D /* Build configuration list for PBXNativeTarget "Kompas-SubmissionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E36F82D27875BD000FDA43D /* Debug */,
+				3E36F82E27875BD000FDA43D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E36F82F27875BD000FDA43D /* Build configuration list for PBXNativeTarget "Kompas-SubmissionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E36F83027875BD000FDA43D /* Debug */,
+				3E36F83127875BD000FDA43D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E36F7F727875BCE00FDA43D /* Project object */;
+}
