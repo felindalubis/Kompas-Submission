@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherViewController: UIViewController {
     
     @IBOutlet var contentView: WeatherView!
-    var viewModel = WeatherViewModel()
+    private let viewModel = WeatherViewModel()
+    private var locationManager: CLLocationManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,19 +20,24 @@ class WeatherViewController: UIViewController {
         fetchData()
     }
     
-    func commonSetup() {
+    private func commonSetup() {
         contentView.scrollView.refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
     }
     
-    func fetchData() {
-        viewModel.fetchWeatherData(location: "Serang") { [weak self] result in
-            DispatchQueue.main.async {
-                self?.setDataToView(data: result)
+    private func fetchData() {
+        self.getUserLocation { [weak self] lat, lon in
+            self?.viewModel.fetchWeatherData(latitude: lat, longitude: lon) { result in
+                DispatchQueue.main.async {
+                    self?.setDataToView(data: result)
+                }
             }
         }
     }
     
-    func setDataToView(data: WeatherModel) {
+    private func setDataToView(data: WeatherModel) {
         contentView.cityLabel.text = "\(data.name), \(data.sys.country)"
         contentView.updateTimeLabel.text = "Update at: \(data.dt.getStringDate(dateStyle: .full))"
         contentView.weatherLabel.text = data.weather.first?.main
@@ -45,10 +52,25 @@ class WeatherViewController: UIViewController {
     }
     
     @objc func didPullToRefresh() {
-    
-        DispatchQueue.main.asyncAfter(deadline: .now()+1.5, execute: {
+        self.fetchData()
+        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
             self.contentView.scrollView.refreshControl?.endRefreshing()
         })
+    }
+}
+
+extension WeatherViewController: CLLocationManagerDelegate {
+    private func getUserLocation(completion: @escaping(String, String) -> Void) {
+        self.locationManager?.startUpdatingLocation()
+        guard let location = locationManager?.location?.coordinate else { return }
+        let lat = String(describing: location.latitude)
+        let lon = String(describing: location.longitude)
+        completion(lat, lon)
+        self.locationManager?.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error getting user's location: \(error)")
     }
 }
 

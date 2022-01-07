@@ -9,11 +9,12 @@ import Foundation
 
 class WeatherViewModel {
     
-    func fetchWeatherData(location: String, completion: @escaping (WeatherModel) -> Void) {
+    func fetchWeatherData(latitude: String, longitude: String, completion: @escaping (WeatherModel) -> Void) {
         let request = WeatherService()
         let apiToken = Bundle.main.infoDictionary?["API_KEY"]  as? String
         request.parameters = [
-            URLQueryItem(name: "q", value: location),
+            URLQueryItem(name: "lat", value: latitude),
+            URLQueryItem(name: "lon", value: longitude),
             URLQueryItem(name: "appId", value: apiToken),
             URLQueryItem(name: "units", value: "metric")
         ]
