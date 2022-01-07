@@ -10,7 +10,7 @@ This is the final product of my weather app
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/felindalubis/Kompas-Submission/blob/main/Simulator%20Screen%20Recording%20-%20iPhone%2012%20-%202022-01-08%20at%2001.55.51.gif)
 
 
 ## 🚀 About Me
